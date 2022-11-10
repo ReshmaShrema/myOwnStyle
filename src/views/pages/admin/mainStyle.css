@@ -1,10 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+}
+/* primary design */
+body{
+    background-color:rgba(165, 42, 42, 0.169);
+}
+.btn-custom{
+background:rgb(165, 42, 42);
+border-radius: 40% 0%;
+color:#ffffff
+}
+.btn-custom:hover{
+    color:#ffffff;
+    border:3px solid rgb(165, 42, 42);
+}
+
+/* navbar design */
 .navbar-custom{
-    background-color: brown;
+    background-color: rgb(165, 42, 42);
     height:12vh;
 }
 .navbar-text-custom{
     color:#ffffff;
-    font-size: 2rem;
+    font-size: 2.8rem;
+    text-shadow: 6px 5px #2d2c2c;
 }
 .navbar-text-custom:hover{
     text-decoration: none;
@@ -18,9 +38,18 @@
     text-decoration: underline;
 }
 .custom-container{
-    width:40vw;
-    margin-top: 6em; ;
+    width:50vw;
+    margin-top: 6em;
+    background-color: #ffffff;
 }
 
-
-
+/* form design */
+.main-heading{
+background: -webkit-linear-gradient(rgb(165, 42, 42), rgb(231, 227, 227));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+#admin-login-form{
+    display: none;
+}

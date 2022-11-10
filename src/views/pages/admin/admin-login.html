@@ -25,19 +25,38 @@
                         <div class="collapse navbar-collapse " id="navbarSupportedContent">
                             <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link active text-white nav-link-custom" aria-current="page" href="#">Login</a>
+                                    
+                                        <a class="nav-link active text-white nav-link-custom" aria-current="page" onclick="document.getElementById('admin-login-form').style.display='block'"href="#">Login</a>
+
+                                
+                                    
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
             </header>
-            <section >
-                <div class="container custom-container">
-                    <div class="row shadow my-5">
-                        <div class="col-8 mx-auto  m-5">
+            <section  id="admin-login-form">
+                <div class="container shadow custom-container">
+                    <div class="row">
+                        <div class="col">
+<button type="button font-weight-bold" class="btn">
+  X
+</button>
+                        </div>
+                    </div>
+                    <div class="row ">
+                        
+                                    <div class="col-12">
+                                        <h1 class="main-heading mt-5">Welcome to My Own Design</h1>
+                                    </div>
+                                    
+                                </div>
+                    <div class="row shadow ">
+                        
+                        <div class="col-9 mx-auto  pt-5">
                             <div class="box-model">
-                                <h1>Welcom to mYoWNdESIGN</h1>
+                                
                                 <div class="form-floating mb-3">
                                     <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                                     <label for="floatingInput">Email address</label>
@@ -46,6 +65,7 @@
                                     <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                                     <label for="floatingPassword">Password</label>
                                 </div>
+                                <button type="submit" class="btn btn-custom mt-5 mb-5 float-end">Submit</button>
                             </div>
                         </div>
                     </div>
