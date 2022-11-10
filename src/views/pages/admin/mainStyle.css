@@ -1,19 +1,26 @@
-.navbar{
+.navbar-custom{
     background-color: brown;
     height:12vh;
 }
-.navbar-text{
+.navbar-text-custom{
     color:#ffffff;
     font-size: 2rem;
 }
-.navbar-text:hover{
+.navbar-text-custom:hover{
     text-decoration: none;
     color:rgb(255, 245, 245);
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
-a:hover{
+.nav-link-custom{
+    font-size:1.2rem;
+}
+.nav-link-custom:hover{
     text-decoration: underline;
 }
-.navbar-toggler-icon{
-   stroke: antiquewhite;
+.custom-container{
+    width:40vw;
+    margin-top: 6em; ;
 }
+
+
+
