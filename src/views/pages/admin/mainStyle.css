@@ -1,10 +1,15 @@
 *{
     margin:0;
     padding:0;
+    margin: 0;
+       
 }
 /* primary design */
 body{
-    background-color:rgba(165, 42, 42, 0.169);
+    background-color:rgb(245, 245, 245);
+}
+header{
+    width:100vw;
 }
 .btn-custom{
 background:rgb(165, 42, 42);
@@ -15,7 +20,9 @@ color:#ffffff
     color:#ffffff;
     border:3px solid rgb(165, 42, 42);
 }
-
+.alert-custom{
+    display: none;
+}
 /* navbar design */
 .navbar-custom{
     background-color: rgb(165, 42, 42);
@@ -66,13 +73,20 @@ color: rgb(165, 42, 42);
 
 
 @media screen and (max-width: 992px) {
-    .navbar-custom {
+    .navbar-custom{
             height: 25vh;
         }
-             
-        
-              
+        .main-heading{
+            font-size: 1.5rem;
+        }            
 }
+@media screen and (max-width: 700px) {
 
+    .main-heading {
+        font-size: 1.3rem;
+    }
+
+
+}
 
 
