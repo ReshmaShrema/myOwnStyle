@@ -14,19 +14,19 @@
     <body>
         <div class="container-fluid">
             <header>
-                <nav class="navbar navbar-expand-lg  navbar-dark navbar-custom">
+                <nav class="navbar navbar-expand-lg nav-dark navbar-custom">
                     <div class="container-fluid position-relative ">
                         <div class="position-absolute top-0 start-50 translate-middle my-4 ">
                             <a class="navbar-brand navbar-text-custom " href="#">Admin</a>        
                         </div>                    
                         <button class="navbar-toggler navbar-toggler-custom" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon " ></span>
+                            <span class="navbar-toggler-icon "></span>
                         </button>
                         <div class="collapse navbar-collapse " id="navbarSupportedContent">
                             <ul class="navbar-nav  mb-2 mb-lg-0 ms-auto">
                                 <li class="nav-item">
                                     
-                                        <a class="nav-link active text-white nav-link-custom" aria-current="page" onclick="document.getElementById('admin-login-form').style.display='block'"href="#">Login</a>
+                                        <a class="nav-link active nav-link-custom text-white" aria-current="page" onclick="document.getElementById('admin-login-form').style.display='block'" href="#">Login</a>
 
                                 
                                     
@@ -39,7 +39,7 @@
             <section  id="admin-login-form">
                 <div class="container shadow custom-container">
                     <div class="row">
-                        <div class="col">
+                        <div class="col ">
 <button type="button" onclick="document.getElementById('admin-login-form').style.display='none'" class="btn float-end fw-bolder btn-close-custom mt-2">
   X
 </button>
@@ -54,7 +54,7 @@
                                 </div>
                     <div class="row shadow ">
                         
-                        <div class="col-9 mx-auto  pt-5">
+                        <div class="col-lg-9 col-md-10  col-sm-12 mx-auto  pt-2">
                             <div class="box-model">
                                 
                                 <div class="form-floating mb-3">

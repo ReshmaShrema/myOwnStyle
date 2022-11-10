@@ -33,9 +33,11 @@ color:#ffffff
 }
 .nav-link-custom{
     font-size:1.2rem;
+   
 }
 .nav-link-custom:hover{
     text-decoration: underline;
+   
 }
 .custom-container{
     width:50vw;
@@ -53,3 +55,24 @@ background: -webkit-linear-gradient(rgb(165, 42, 42), rgb(231, 227, 227));
 #admin-login-form{
     display: none;
 }
+.btn-close-custom:hover{
+font-size: 1rem;
+border-color:rgb(165, 42, 42);
+border-radius:50%;
+border-width: 2px;
+color: rgb(165, 42, 42);
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .navbar-custom {
+            height: 25vh;
+        }
+             
+        
+              
+}
+
+
+
