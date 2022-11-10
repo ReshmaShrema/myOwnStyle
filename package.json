@@ -1,0 +1,25 @@
+{
+  "name": "myowndesign",
+  "version": "1.0.0",
+  "description": "ecommeer\u001b[rce",
+  "main": "app.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReshmaShrema/myOwnDesign.git"
+  },
+  "keywords": [
+    "myowndesign"
+  ],
+  "author": "Reshma M S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReshmaShrema/myOwnDesign/issues"
+  },
+  "homepage": "https://github.com/ReshmaShrema/myOwnDesign#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
