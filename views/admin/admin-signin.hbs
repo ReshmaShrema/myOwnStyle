@@ -15,14 +15,17 @@
                 <div class="row shadow ">                  
                     <div class="col-9 mx-auto  pt-5">
                         <div class="box-model">
-                            <form action="" onsubmit="return validation()">
+                            <form action="/admin/signin" method="post" onsubmit="return validation()">
+                            {{#if adminLoginErr}}
+                                <p class="alert-custom mb-2">{{message}}</p>
+                            {{/if}}
                                 <div class="form-floating mb-3">
-                                    <input type="text" class="form-control" id="floatingInput" placeholder="name@gmai.com">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="name@gmai.com" name="email">
                                     <label for="floatingInput">Email address</label>
                                     <p class="alert-custom mt-2" id="emailErrorId" role="alert"></p>
                                 </div>
                                 <div class="form-floating">
-                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">                                  <label for="floatingPassword">Password</label>
+                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">                                  <label for="floatingPassword">Password</label>
                                         <p class="alert-custom mt-2" id="passwordErrorId" role="alert"></p>
                                 </div>
                                 <button type="submit" class="btn btn-custom mt-5 mb-5 float-end">Submit</button>
@@ -63,3 +66,5 @@
 			}
          }
 	    </script>
+       
+           

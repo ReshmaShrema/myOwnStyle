@@ -3,9 +3,9 @@ const express = require('express');
 
 // importing express-session module
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
 
-// importing file-store module
-const filestore = require('session-file-store')(session);
+
 
 //view engine setup npm i express-handlebars
 const hbs = require("express-handlebars");
@@ -14,66 +14,25 @@ const hbs = require("express-handlebars");
 const app =express();
 
 // creating session
+app.use(cookieParser());
+const oneHour = 1000 * 60 * 60;
 app.use(
   session({
     name: "session-id",
-    secret: "GFGEnter", // Secret key,
-    saveUninitialized: false,
+    secret: "myowndesign", // Secret key,
+    saveUninitialized: true,
+    cookie:{maxAge:oneHour},
     resave: false,
-    store: new filestore(),
   })
 );
 
 
-// Asking for the authorization
-function auth(req, res, next) {
-    // Checking for the session
-    console.log(req.session)
+
   
-// Checking for the authorization
-    if (!req.session.user) {
-        var authHeader = req.headers.authorization;
-        console.log(authHeader);
-        var err = new Error("You are not authenticated")
-        res.setHeader("WWW-Authenticate", "Basic")
-        err.status = 401
-        next(err)
-  
-        var auth = new Buffer.from(authHeader.split(' ')[1],
-            "base64").toString().split(":")
-  
-        // Reading username and password
-        var username = auth[0]
-        var password = auth[1]
-        if (username == "admin2" && password == "password") {
-            req.session.user = "admin2"
-            next()
-        }
-        else {
-            // Retry incase of incorrect credentials
-            var err = new Error('You are not authenticated!');
-            res.setHeader("WWW-Authenticate", "Basic")
-            err.status = 401;
-            return next(err);
-        }
-    }
-    else {
-        if (req.session.user === "admin2") {
-            next()
-        }
-        else {
-            var err = new Error('You are not authenticated!');
-            res.setHeader("WWW-Authenticate", "Basic")
-            err.status = 401;
-            return next(err);
-        }
-    }
-}
-  
-// Middlewares
-app.use(auth)
+
 //Middleware for parsing data
 app.use(express.json());
+app.use(express.urlencoded({extended:false}))
 
 // static file managing
 const path = require('path');

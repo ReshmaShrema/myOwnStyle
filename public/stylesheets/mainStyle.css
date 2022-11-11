@@ -1,8 +1,7 @@
 *{
     margin:0;
     padding:0;
-    margin: 0;
-       
+    margin: 0;     
 }
 /* primary design */
 body{
@@ -23,6 +22,7 @@ color:#ffffff
 .alert-custom{
     background-color: rgb(239, 202, 202);
     color: rgb(170, 23, 23);
+    padding:10px;
 }
 /* navbar design */
 .navbar-custom{
@@ -60,9 +60,7 @@ background: -webkit-linear-gradient(rgb(165, 42, 42), rgb(231, 227, 227));
     -webkit-text-fill-color: transparent;
     text-align: center;
 }
-#admin-login-form{
-    display: none;
-}
+
 .btn-close-custom:hover{
 font-size: 1rem;
 border-color:rgb(165, 42, 42);
