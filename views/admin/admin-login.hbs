@@ -1,0 +1,65 @@
+        
+        <!-- login Section -->
+        <section  id="admin-login-form">
+            <div class="container shadow custom-container">
+                <div class="row">
+                    <div class="col">
+                        <button type="button" onclick="document.getElementById('admin-login-form').style.display='none'" class="btn float-end fw-bolder btn-close-custom mt-2">X</button>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-12">
+                        <h1 class="main-heading mt-5">Welcome to My Own Design</h1>
+                    </div>                
+                </div>
+                <div class="row shadow ">                  
+                    <div class="col-9 mx-auto  pt-5">
+                        <div class="box-model">
+                            <form action="" onsubmit="return validation()">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="floatingInput" placeholder="name@gmai.com">
+                                    <label for="floatingInput">Email address</label>
+                                    <p class="alert-custom mt-2" id="emailErrorId" role="alert"></p>
+                                </div>
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">                                  <label for="floatingPassword">Password</label>
+                                        <p class="alert-custom mt-2" id="passwordErrorId" role="alert"></p>
+                                </div>
+                                <button type="submit" class="btn btn-custom mt-5 mb-5 float-end">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </section>    
+       
+        <script type="text/javascript">
+	        function validation(){
+                let email = document.getElementById('floatingInput').value;
+		        let pass = document.getElementById('floatingPassword').value;
+
+                if(email == ""){
+				    document.getElementById('emailErrorId').innerHTML =" ** Please fill the email id field";
+                    return false;
+			    }
+			    if(email.indexOf('@') <= 0 ){
+				    document.getElementById('emailErrorId').innerHTML ="Invalid format";
+				    return false;
+			    }
+                if((email.charAt(email.length-4)!='.') && (email.charAt(email.length-3)!='.')){
+				    document.getElementById('emailErrorId').innerHTML =" Invalid Format";
+				    return false;
+			    }
+
+			if(pass == ""){
+			    document.getElementById('passwordErrorId').innerHTML =" ** Please fill the Password field";
+                document.getElementById('emailErrorId').innerHTML ="";
+				return false;
+			}
+			if((pass.length <= 5) || (pass.length > 20)) {
+				document.getElementById('passwordErrorId').innerHTML =" ** Password lenght must be between 2 and 20";
+                document.getElementById('emailErrorId').innerHTML ="";
+				return false;	
+			}
+         }
+	    </script>

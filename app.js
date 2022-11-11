@@ -1,22 +1,34 @@
 const express = require('express');
+
+//view engine setup npm i express-handlebars
+const hbs = require("express-handlebars");
+
+//setting the server app,init express app
 const app =express();
-//Middleware setting 
+
+//Middleware for parsing data
 app.use(express.json());
 
-//root setting
-app.get('/',(req,res)=>{
-    res.status(200);
-    res.send("Welcome to root URL of Server");
-})
-app.post('/',(req,res)=>{
-    const {name}=req.body;
-    res.send(`welcome ${name}`);
+// static file managing
+const path = require('path');
+app.use(express.static(path.join(__dirname,'public')))
 
-})
-app.get('/hello',(req,res)=>{
-    res.set('Content-Type','text/html');
-    res.status(200).send('<h1>Dello</h1>');
-});
+// view engin
+app.set('views',path.join(__dirname,'views'))
+app.set('view engine','hbs')
+
+//setting partial and layout folder
+app.engine('hbs',hbs.engine({extname:'hbs',defaultLayout:'layout',layoutDir:__dirname+'/views/layout/',partialsDir:__dirname+'/views/partials'}))
+
+// router setting
+const userRouter = require('./routes/user');
+const adminRouter = require('./routes/admin');
+app.use('/user',userRouter);
+app.use('/admin',adminRouter);
+
+
+
+    
 // port setting
 app.listen(3000,(error)=>{
     if(!error)

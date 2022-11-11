@@ -4,6 +4,7 @@
   "description": "ecommeer\u001b[rce",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "start"
   },
   "repository": {
@@ -20,6 +21,8 @@
   },
   "homepage": "https://github.com/ReshmaShrema/myOwnDesign#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "nodemon": "^2.0.20"
   }
 }
