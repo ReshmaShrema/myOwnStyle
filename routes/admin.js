@@ -22,6 +22,7 @@ router.get('/signin',(req,res)=>{
         message:req.session.message,
         admin:true,
         adminLoginPage:true,
+        header_message:'Admin Signin Page'
         })
 });
 router.post('/signin',(req,res)=>{
@@ -29,7 +30,7 @@ router.post('/signin',(req,res)=>{
         if(req.body.password == password){
             req.session.adminLogin=true;
             req.session.adminLoginErr=false;
-            res.redirect('/admin/admin-dashboard');
+            res.redirect('/admin/dashboard');
         }
         else{
             req.session.adminLoginErr = true;
@@ -45,5 +46,10 @@ router.post('/signin',(req,res)=>{
         res.redirect('/admin/signin')
         }
     });
+
+// admin dashboard
+router.get('/dashboard',(req,res)=>{
+    res.render('admin/admin-dashboard')
+})
 
 module.exports = router;
