@@ -1,3 +1,31 @@
+ <div class="container-fluid main-container">
+        <header class="header-custom ">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid  container-fluid-navbar-admin-custom">
+                    <a class="navbar-brand text-white text-custom navbar-brand-custom" href="#">{{header_message}}ff</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mt-2">
+                            {{!-- {{#if adminLogin}} --}}
+                            <li class="nav-item">
+                                <a class="nav-link text-white nav-link-custom" aria-current="page" href="#"  onclick="document.getElementById('admin-login-form').style.display='block'">Signin</a>
+                            </li>
+                            {{!-- {{else}} --}}
+                            <li class="nav-item">
+                                <a class="nav-link text-white nav-link-custom" aria-current="page" href="#">Signout</a>
+                            </li>
+                            {{!-- {{/if}} --}}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+
+{{!-- 
 <header>
     <div class="container-fluid navbar-custom">
         <nav class="navbar navbar-expand-lg  navbar-dark" >
@@ -24,4 +52,4 @@
             </div>
         </nav>
     </div>
-</header>
+</header> --}}

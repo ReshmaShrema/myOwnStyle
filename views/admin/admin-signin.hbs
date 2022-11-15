@@ -1,9 +1,8 @@
-        
         <!-- login Section -->
-        <section  id="admin-login-form">
-            <div class="container shadow custom-container">
-                <div class="row">
-                    <div class="col">
+        <section  id="admin-login-form" >
+            <div class="container-fluid  custom-container">
+                <div class="row" >
+                    <div class="col-5" >
                         <button type="button" onclick="document.getElementById('admin-login-form').style.display='none'" class="btn float-end fw-bolder btn-close-custom mt-2">X</button>
                     </div>
                 </div>
@@ -12,8 +11,8 @@
                         <h1 class="main-heading mt-5">Welcome to My Own Design</h1>
                     </div>                
                 </div>
-                <div class="row shadow ">                  
-                    <div class="col-9 mx-auto  pt-5">
+                <div class="row  ">                  
+                    <div class="col-8 mx-auto  pt-5">
                         <div class="box-model">
                             <form action="/admin/signin" method="post" onsubmit="return validation()">
                             {{#if adminLoginErr}}
@@ -26,7 +25,7 @@
                                 </div>
                                 <div class="form-floating">
                                     <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">                                  <label for="floatingPassword">Password</label>
-                                        <p class="alert-custom mt-2" id="passwordErrorId" role="alert"></p>
+                                        <div class="alert-custom mt-2" id="passwordErrorId" role="alert"></div>
                                 </div>
                                 <button type="submit" class="btn btn-custom mt-5 mb-5 float-end">Submit</button>
                             </form>
