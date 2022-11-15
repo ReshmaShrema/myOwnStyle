@@ -28,7 +28,7 @@ body {
 }
 
 .btn-custom {
-    background: rgb(165, 42, 42);
+    background: rgb(11, 4, 64);
     border-radius: 40% 0%;
     color: #ffffff
 }
@@ -41,9 +41,15 @@ body {
 .alert-custom {
     color: rgb(170, 23, 23);
     padding: 10px;
-    background-color: red;
+    background-color: rgb(247, 186, 186);
 }
-
+input[type="text"],input[type="password"]{
+    background-color: #ca232301;
+    border:none;
+}
+input[type="text"]:focus,input[type="password"]:focus {
+    background-color: #be610f01;
+}
 .image-custom {
     width: 100%;
     height: 100%;
@@ -58,7 +64,7 @@ body {
 
 .btn-close-custom:hover {
     font-size: 1rem;
-    border-color: rgb(165, 42, 42);
+    border-color: rgb(7, 3, 52);
     border-radius: 50%;
     border-width: 2px;
     color: rgb(165, 42, 42);
@@ -67,7 +73,28 @@ body {
 .nav-link-custom:hover {
     text-decoration: underline;
 }
-
+.box{
+        width: 30rem;
+        height: 20rem;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        background: inherit;
+        overflow: hidden;
+}
+.box:before{
+    position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+        filter: blur(10px);
+        margin: -20px;
+}
 @media screen and (max-width: 400px) {
     .navbar-brand-custom {
         font-size: 1rem;

@@ -33,7 +33,38 @@
     <!-- admin Login form -->
     <section class="main-container">
         <div class="container">
-            
+            <div class="row mt-1">
+                <div class="col-12 col-sm-12 col-md-9 col-lg-8 mx-auto ">
+                    <div class="row box" style="border-color:red">
+                        <div class="close-button-container">
+                            <button type="button" onclick="document.getElementById('admin-login-form').style.display='none'" class="btn float-end fw-bolder btn-close-custom">X</button>
+                        </div>  
+                        <div class="text-container">
+                            <h1 class="main-heading ">Welcome to myOwnDesign</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <form action="/admin/signin" method="post" onsubmit="return validation()">
+                                <!-- {{#if adminLoginErr}} -->
+                                    <p class="">{{message}}</p>
+                                    <!-- {{/if}} -->
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="floatingInput" placeholder="name@gmai.com" name="email">
+                                        <label for="floatingInput">Email address</label>
+                                        <p class="" id="emailErrorId" role="alert">dddd</p>
+                                    </div>
+                                    <div class="form-floating">
+                                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                                        <label for="floatingPassword">Password</label>
+                                        <div class="" id="passwordErrorId" role="alert">wwww</div>
+                                    </div>
+                                    <button type="submit" class="btn btn-custom float-end">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
         </div>            
     </section>
     
