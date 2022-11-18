@@ -17,8 +17,7 @@ let session;
 
 //admin signin
 router.get('/signin',(req,res)=>{
-    req.session.adminLogin == true
-      ? res.redirect("/admin/dashboard")
+    req.session.adminLogin == true? res.redirect("/admin/dashboard")
       : res.render("admin/admin-signin", {
           adminLoginErr: req.session.adminLoginErr,
           message: req.session.message,

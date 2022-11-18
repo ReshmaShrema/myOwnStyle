@@ -1,16 +1,15 @@
 * {
     padding: 0;
     margin: 0;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 body {
-    background: linear-gradient(to left, rgba(7, 128, 115, 0.8), rgba(255, 0, 0, 0) 70.71%),
-        linear-gradient(127deg, rgba(24, 92, 140, 0.8), rgba(0, 255, 0, 0) 70.71%),
-        linear-gradient(336deg, rgba(17, 166, 199, 0.8), rgba(0, 0, 255, 0) 70.71%);
-        background-size: cover;
-            height: 100vh;
-            color:rgb(4, 51, 104)
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to left, rgba(7, 128, 115, 0.8), rgba(255, 0, 0, 0) 70.71%),linear-gradient(127deg, rgba(24, 92, 140, 0.8), rgba(0, 255, 0, 0) 70.71%),linear-gradient(336deg, rgba(17, 166, 199, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    background-size: cover;
+    height: 100vh;
+    color:rgb(4, 51, 104)
 }
 
 .main-container {
@@ -79,7 +78,7 @@ input[type="text"]:focus,input[type="password"]:focus {
     color: rgb(165, 42, 42);
 }
 
-.nav-link-custom:hover {
+.link-custom:hover {
     text-decoration: underline;
 }
 .box{
@@ -89,7 +88,24 @@ input[type="text"]:focus,input[type="password"]:focus {
                 linear-gradient(127deg, rgba(239, 241, 244, 0.8), rgba(244, 245, 244, 0) 70.71%),
                 linear-gradient(336deg, rgba(134, 207, 207, 0.8), rgba(0, 0, 255, 0) 70.71%);
 }
-
+/* admin dashboard */
+.aside-bottom-link{
+    color: rgb(31, 11, 88);
+    text-decoration: none;
+    
+}
+.aside-bottom-link:hover{
+    color: rgb(31, 11, 88);
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+.aside-bottom-list{
+    list-style:none;
+    ;
+}
+.aside-bottom-section{
+    border-top: 1px solid black;
+}
 @media screen and (max-width: 400px) {
     .navbar-brand-custom {
         font-size: 1rem;
