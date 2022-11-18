@@ -5,13 +5,15 @@ const express = require('express');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
-
-
 //view engine setup npm i express-handlebars
 const hbs = require("express-handlebars");
 
 //setting up the server app,init express app
 const app =express();
+
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
 
 // creating session
 app.use(cookieParser());
@@ -52,9 +54,6 @@ app.use('/user',userRouter);
 app.use('/admin',adminRouter);
 
 
-if(process.env.NODE_ENV !== 'production'){
-    require("dotenv").config();
-}
 
     
 // port setting
