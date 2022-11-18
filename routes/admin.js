@@ -9,4 +9,8 @@ router.post("/signin", adminController.postAdminSignin);
 // admin dashboard
 router.get('/dashboard',adminController.verifyLogin,adminController.getAdminDashboard)
 
+
+// admin usermangement
+router.get('/usermanagement',adminController.verifyLogin,adminController.getAdminUsermanagement);
+
 module.exports = router;

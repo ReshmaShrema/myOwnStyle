@@ -19,8 +19,7 @@
         {{>admin-header}}
         {{#if adminLoginPage}}
             {{>admin-dashboard}}
-        {{/if}}
-        {{#if userLoginPage}}
+        {{else}}
             {{{body}}}
         {{/if}}
          <!--Bootstrap  -->

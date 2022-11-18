@@ -7,6 +7,7 @@ let adminLoginErr;
 let message;
 
 exports.verifyLogin=(req,res,next)=>{
+        req.session.adminLogin=true;
         (req.session.adminLogin==true)?next():res.redirect('/admin/signin')
     }
 exports.getAdminSignin = (req, res) => {
@@ -46,5 +47,12 @@ exports.getAdminDashboard =(req,res)=>{
     res.render('admin/admin-dashboard',{
         adminLoginPage:true,
         header_message:"Dashboard"
+    })
+}
+
+exports.getAdminUsermanagement =(req,res)=>{
+    res.render('admin/admin-usermanagement',{
+        adminLoginPage:true,
+        header_message:"User Management"
     })
 }
