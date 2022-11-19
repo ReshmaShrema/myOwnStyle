@@ -8,7 +8,7 @@ let message;
 
 exports.verifyLogin=(req,res,next)=>{
         req.session.adminLogin=true;
-        (req.session.adminLogin==true)?next():res.redirect('/admin/signin')
+        (req.session.adminLogin)?next():res.redirect('/admin/signin')
     }
 exports.getAdminSignin = (req, res) => {
         req.session.adminLogin == true
