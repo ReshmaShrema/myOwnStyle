@@ -16,7 +16,7 @@ exports.getAdminSignin = (req, res) => {
         : res.render("admin/admin-signin", {
             adminLoginErr: req.session.adminLoginErr,
             message: req.session.message,
-            adminLoginPage: false,
+            adminPage: false,
             header_message: "Welcome to myOwnDesign",
         });    
     };
@@ -45,14 +45,28 @@ exports.postAdminSignin = (req, res) => {
 
 exports.getAdminDashboard =(req,res)=>{
     res.render('admin/admin-dashboard',{
-        adminLoginPage:true,
+        adminPage:true,
         header_message:"Dashboard"
     })
 }
 
 exports.getAdminUsermanagement =(req,res)=>{
     res.render('admin/admin-usermanagement',{
-        adminLoginPage:true,
+        adminPage:true,
         header_message:"User Management"
+    })
+}
+
+exports.getAdminProductmangement = (req, res) => {
+    res.render("admin/admin-productmanagement", {
+    adminPage: true,
+    header_message: "Product Management",
+    });
+};
+
+exports.getAdminOrdermanagement =(req,res)=>{
+    res.render('admin/admin-ordermanagement',{
+        adminPage:true,
+        header_message:"Order management",
     })
 }

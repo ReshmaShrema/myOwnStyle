@@ -16,8 +16,12 @@
         <title>myOwnDesign</title>
     </head>
     <body>
-        {{>admin-header}}
-        {{#if adminLoginPage}}
+        {{#if userPage}}
+            {{>user-header}}
+        {{else}}
+            {{>admin-header}}
+        {{/if}}
+        {{#if adminPage}}
             {{>admin-dashboard}}
         {{else}}
             {{{body}}}

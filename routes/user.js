@@ -1,8 +1,7 @@
 const express = require("express");
+const userController = require("../controller/user");
 const router = express.Router();
 
-router.get("/signin", (req, res) => {
-  res.render("admin/admin-login");
-});
+router.get('/',getGuestUserPage)
 
 module.exports = router;

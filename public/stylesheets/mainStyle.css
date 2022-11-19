@@ -27,7 +27,6 @@ body {
         1px 22px 10px rgba(16, 16, 16, 0.2),
         1px 25px 35px rgba(16, 16, 16, 0.2),
         1px 30px 60px rgba(16, 16, 16, 0.2);
-
 }
 
 .btn-custom {
@@ -104,8 +103,22 @@ input[type="text"]:focus,input[type="password"]:focus {
     ;
 }
 .aside-bottom-section{
-    border-top: 1px solid black;
+    border-top: 1px solid rgb(125, 123, 123);
 }
+.table-custom{
+    border-color: #91919100;
+}
+/* user */
+.sublist-custom{
+    background-color: #91919100;
+}
+.sublist-custom:hover{
+    background-color: #13060645;
+}
+.sublist--link-custom:hover{
+background-color: #13060645;
+}
+
 @media screen and (max-width: 400px) {
     .navbar-brand-custom {
         font-size: 1rem;
@@ -126,7 +139,6 @@ input[type="text"]:focus,input[type="password"]:focus {
         left: 40%;
         font-size: 2rem;
     }
-
 }
 
 

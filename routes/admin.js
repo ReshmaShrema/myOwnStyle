@@ -13,4 +13,11 @@ router.get('/dashboard',adminController.verifyLogin,adminController.getAdminDash
 // admin usermangement
 router.get('/usermanagement',adminController.verifyLogin,adminController.getAdminUsermanagement);
 
+// admin productmanagement
+router.get("/productmanagement",adminController.verifyLogin,adminController.getAdminProductmangement
+);
+
+// admin ordermanagement
+router.get("/ordermanagement",adminController.verifyLogin,adminController.getAdminOrdermanagement
+);
 module.exports = router;
